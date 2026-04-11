@@ -1,0 +1,1322 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:link="http://purl.org/rss/1.0/modules/link/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
+ xmlns:vcard="http://nwalsh.com/rdf/vCard#">
+    <bib:Article rdf:about="https://pmc.ncbi.nlm.nih.gov/articles/PMC4553952/">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0025-7974"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pillai</foaf:surname>
+                        <foaf:givenName>Krishna</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Akhter</foaf:surname>
+                        <foaf:givenName>Javid</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Chua</foaf:surname>
+                        <foaf:givenName>Terence C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Shehata</foaf:surname>
+                        <foaf:givenName>Mena</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Alzahrani</foaf:surname>
+                        <foaf:givenName>Nayef</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Al-Alem</foaf:surname>
+                        <foaf:givenName>Issan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Morris</foaf:surname>
+                        <foaf:givenName>David L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_4"/>
+        <link:link rdf:resource="#item_5"/>
+        <dc:title>Heat Sink Effect on Tumor Ablation Characteristics as Observed in Monopolar Radiofrequency, Bipolar Radiofrequency, and Microwave, Using Ex Vivo Calf Liver Model</dc:title>
+        <dcterms:abstract>Thermal ablation of liver tumors near large blood vessels is affected by the cooling effect of blood flow, leading to incomplete ablation. Hence, we conducted a comparative investigation of heat sink effect in monopolar (MP) and bipolar (BP) radiofrequency ablation (RFA), and microwave (MW) ablation devices., With a perfused calf liver, the ablative performances (volume, mass, density, dimensions), with and without heat sink, were measured. Heat sink was present when the ablative tip of the probes were 8.0 mm close to a major hepatic vein and absent when &gt;30 mm away. Temperatures (T1 and T2) on either side of the hepatic vein near the tip of the probes, heating probe temperature (T3), outlet perfusate temperature (T4), and ablation time were monitored., With or without heat sink, BP radiofrequency ablated a larger volume and mass, compared with MP RFA or MW ablation, with latter device producing the highest density of tissue ablated. MW ablation produced an ellipsoidal shape while radiofrequency devices produced spheres., Percentage heat sink effect in Bipolar radiofrequency : Mono-polar radiofrequency : Microwave was (Volume) 33:41:22; (mass) 23:56:34; (density) 9.0:26:18; and (relative elipscity) 5.8:12.9:1.3, indicating that BP and MW devices were less affected., Percentage heat sink effect on time (minutes) to reach maximum temperature (W) = 13.28:9.2:29.8; time at maximum temperature (X) is 87:66:16.66; temperature difference (Y) between the thermal probes (T3) and the temperature (T1 + T2)/2 on either side of the hepatic vessel was 100:87:20; and temperature difference between the (T1 + T2)/2 and temperature of outlet circulating solution (T4), Z was 20.33:30.23:37.5., MW and BP radiofrequencies were less affected by heat sink while MP RFA was the most affected. With a single ablation, BP radiofrequency ablated a larger volume and mass regardless of heat sink.</dcterms:abstract>
+        <dc:date>2015-3-06</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pmc.ncbi.nlm.nih.gov/articles/PMC4553952/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:38:03</dcterms:dateSubmitted>
+        <z:libraryCatalog>PubMed Central</z:libraryCatalog>
+        <bib:pages>e580</bib:pages>
+        <z:PMID>25738477</z:PMID>
+        <z:PMCID>PMC4553952</z:PMCID>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0025-7974">
+        <dc:identifier>DOI 10.1097/MD.0000000000000580</dc:identifier>
+        <prism:volume>94</prism:volume>
+        <dc:title>Medicine</dc:title>
+        <dc:identifier>ISSN 0025-7974</dc:identifier>
+        <prism:number>9</prism:number>
+        <dcterms:alternative>Medicine (Baltimore)</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_4">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Catalog Page</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pmc.ncbi.nlm.nih.gov/articles/PMC4553952/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:38:03</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_5">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pmc.ncbi.nlm.nih.gov/articles/PMC4553952/pdf/medi-94-e580.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:38:05</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://pmc.ncbi.nlm.nih.gov/articles/PMC6887525/">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0739-9529"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Smolock</foaf:surname>
+                        <foaf:givenName>Amanda R.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Shaw</foaf:surname>
+                        <foaf:givenName>Colette</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_7"/>
+        <link:link rdf:resource="#item_8"/>
+        <dc:title>Hepatic Microwave Ablation in Challenging Locations</dc:title>
+        <dcterms:abstract>In recent years, there has been increased utilization of microwave ablation (MWA) in the treatment of soft tissue tumors. MWA has several theoretical advantages over radiofrequency ablation (RFA) by achieving a more rapid and sustained heating of tissues, increased efficacy in tissues with poor thermal conductivity, and less susceptibility to heat sink effect. While its greater power output has led to appropriate caution when applying this energy to soft tissue tumors, many commonly held beliefs regarding contraindications to MWA are unsupported by data and have been passed along based on experience with RFA. The goal of this article is to review the use of MWA in challenging clinical situations along with the existing evidence for its use.</dcterms:abstract>
+        <dc:date>2019-12</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pmc.ncbi.nlm.nih.gov/articles/PMC6887525/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:39:44</dcterms:dateSubmitted>
+        <z:libraryCatalog>PubMed Central</z:libraryCatalog>
+        <bib:pages>392-397</bib:pages>
+        <z:PMID>31798213</z:PMID>
+        <z:PMCID>PMC6887525</z:PMCID>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0739-9529">
+        <dc:identifier>DOI 10.1055/s-0039-1697003</dc:identifier>
+        <prism:volume>36</prism:volume>
+        <dc:title>Seminars in Interventional Radiology</dc:title>
+        <dc:identifier>ISSN 0739-9529</dc:identifier>
+        <prism:number>5</prism:number>
+        <dcterms:alternative>Semin Intervent Radiol</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_7">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Catalog Page</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pmc.ncbi.nlm.nih.gov/articles/PMC6887525/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:39:44</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pmc.ncbi.nlm.nih.gov/articles/PMC6887525/pdf/10-1055-s-0039-1697003.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:39:46</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://pmc.ncbi.nlm.nih.gov/articles/PMC4519107/">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1932-6203"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ringe</foaf:surname>
+                        <foaf:givenName>Kristina I.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lutat</foaf:surname>
+                        <foaf:givenName>Carolin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rieder</foaf:surname>
+                        <foaf:givenName>Christian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schenk</foaf:surname>
+                        <foaf:givenName>Andrea</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wacker</foaf:surname>
+                        <foaf:givenName>Frank</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Raatschen</foaf:surname>
+                        <foaf:givenName>Hans-Juergen</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_10"/>
+        <link:link rdf:resource="#item_11"/>
+        <dc:title>Experimental Evaluation of the Heat Sink Effect in Hepatic Microwave Ablation</dc:title>
+        <dcterms:abstract>Purpose
+To demonstrate and quantify the heat sink effect in hepatic microwave ablation (MWA) in a standardized ex vivo model, and to analyze the influence of vessel distance and blood flow on lesion volume and shape.
+
+Materials and Methods
+108 ex vivo MWA procedures were performed in freshly harvested pig livers. Antennas were inserted parallel to non-perfused and perfused (700,1400 ml/min) glass tubes (diameter 5mm) at different distances (10, 15, 20mm). Ablation zones (radius, area) were analyzed and compared (Kruskal-Wallis Test, Dunn’s multiple comparison Test). Temperature changes adjacent to the tubes were measured throughout the ablation cycle.
+
+Results
+Maximum temperature decreased significantly with increasing flow and distance (p&lt;0.05). Compared to non-perfused tubes, ablation zones were significantly deformed by perfused tubes within 15mm distance to the antenna (p&lt;0.05). At a flow rate of 700ml/min ablation zone radius was reduced to 37.2% and 80.1% at 10 and 15mm tube distance, respectively; ablation zone area was reduced to 50.5% and 89.7%, respectively.
+
+Conclusion
+Significant changes of ablation zones were demonstrated in a pig liver model. Considerable heat sink effect was observed within a diameter of 15mm around simulated vessels, dependent on flow rate. This has to be taken into account when ablating liver lesions close to vessels.</dcterms:abstract>
+        <dc:date>2015-7-29</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pmc.ncbi.nlm.nih.gov/articles/PMC4519107/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:41:24</dcterms:dateSubmitted>
+        <z:libraryCatalog>PubMed Central</z:libraryCatalog>
+        <bib:pages>e0134301</bib:pages>
+        <z:PMID>26222431</z:PMID>
+        <z:PMCID>PMC4519107</z:PMCID>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1932-6203">
+        <dc:identifier>DOI 10.1371/journal.pone.0134301</dc:identifier>
+        <prism:volume>10</prism:volume>
+        <dc:title>PLoS ONE</dc:title>
+        <dc:identifier>ISSN 1932-6203</dc:identifier>
+        <prism:number>7</prism:number>
+        <dcterms:alternative>PLoS One</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_10">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Catalog Page</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pmc.ncbi.nlm.nih.gov/articles/PMC4519107/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:41:24</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_11">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pmc.ncbi.nlm.nih.gov/articles/PMC4519107/pdf/pone.0134301.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:41:26</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.nature.com/articles/s41598-023-45926-2">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:2045-2322"/>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>Nature Publishing Group</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Klimek</foaf:surname>
+                        <foaf:givenName>Konrad</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mader</foaf:surname>
+                        <foaf:givenName>Nicolai</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Happel</foaf:surname>
+                        <foaf:givenName>Christian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sabet</foaf:surname>
+                        <foaf:givenName>Amir</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Grünwald</foaf:surname>
+                        <foaf:givenName>Frank</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Groener</foaf:surname>
+                        <foaf:givenName>Daniel</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_13"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Thyroid cancer</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Thyroid diseases</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Heat sink effects in thyroid bipolar radiofrequency ablation: an ex vivo study</dc:title>
+        <dcterms:abstract>The study aimed to investigate heat sink effects in radiofrequency ablation (RFA) under thyroid-specific conditions. In an ex vivo model, bovine thyroid lobes were ablated using bipolar RFA with 2.0 kJ energy input at a power level set to 10 W (n = 35) and 25 W (n = 35). Glass vessels (3.0 mm outer diameter) placed within the ablation zone were used to deliver tissue perfusion at various flow rates (0, 0.25, 0.5, 1, 5, 10, 20 ml/min). Temperature was measured in the proximity of the vessel (Tv) and in the non-perfused contralateral region of the ablation zone (Tc), at equal distances to the ablation electrode (d = 8 mm). Maximum temperature within the perfused zone was significantly lowered with Tv ranging from 54.1 ± 1.5 °C (20 ml/min) to 56.9 ± 1.5 °C (0.25 ml/min), compared to Tc from 63.2 ± 3.5 °C (20 ml/min) to 63.2 ± 2.6 °C (0.25 ml/min) (10 W group). The cross-sectional ablation zone area decreased with increasing flow rates from 184 ± 12 mm2 (0 ml/min) to 141 ± 20 mm2 (20 ml/min) at 10 W, and from 207 ± 22 mm2 (0 ml/min) to 158 ± 31 mm2 (20 ml/min) in the 25 W group. Significant heat sink effects were observed under thyroid-specific conditions even at flow rates ≤ 1 ml/min. In thyroid nodules with prominent vasculature, heat dissipation through perfusion may therefore result in clinically relevant limitations to ablation efficacy.</dcterms:abstract>
+        <dc:date>2023-11-07</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nature.com/articles/s41598-023-45926-2</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:43:02</dcterms:dateSubmitted>
+        <z:shortTitle>Heat sink effects in thyroid bipolar radiofrequency ablation</z:shortTitle>
+        <z:language>en</z:language>
+        <z:libraryCatalog>www.nature.com</z:libraryCatalog>
+        <dc:rights>2023 The Author(s)</dc:rights>
+        <bib:pages>19288</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:2045-2322">
+        <dc:identifier>DOI 10.1038/s41598-023-45926-2</dc:identifier>
+        <prism:volume>13</prism:volume>
+        <dc:title>Scientific Reports</dc:title>
+        <dc:identifier>ISSN 2045-2322</dc:identifier>
+        <prism:number>1</prism:number>
+        <dcterms:alternative>Sci Rep</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_13">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nature.com/articles/s41598-023-45926-2.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:43:06</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://doi.org/10.1115/1.2965374">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0148-0731"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Chen</foaf:surname>
+                        <foaf:givenName>Xin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Saidel</foaf:surname>
+                        <foaf:givenName>Gerald M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_17"/>
+        <dc:title>Mathematical Modeling of Thermal Ablation in Tissue Surrounding a Large Vessel</dc:title>
+        <dcterms:abstract>Thermal ablation of a solid tumor in a tissue with radio-frequency (rf) energy can be accomplished by using a probe inserted into the tissue under the guidance of magnetic resonance imaging. The extent of the ablation can be significantly reduced by heat loss from capillary perfusion and by blood flow in a large vessel in the tissue. A mathematical model is presented of the thermal processes that occur during rf ablation of a tissue near a large blood vessel, which should not be damaged. Temperature distribution dynamics are described by the combination of a 3D bioheat transport in tissue together with a 1D model of convective-dispersive heat transport in the blood vessel. The objective was to determine how much of the tissue can be ablated without damaging the blood vessel. This was achieved by simulating the tissue temperature distribution dynamics and by determining the optimal power inputs so that a maximum temperature increase in the tissue was achieved without inducing tissue damage at the edge of the large vessel. The main contribution of this study is to provide a model analysis for pretreatment and, eventually, for intra-operative application to thermal ablation of a tumor located near a large blood vessel.</dcterms:abstract>
+        <dc:date>2008-11-18</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://doi.org/10.1115/1.2965374</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:44:22</dcterms:dateSubmitted>
+        <z:libraryCatalog>Silverchair</z:libraryCatalog>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0148-0731">
+        <dc:identifier>DOI 10.1115/1.2965374</dc:identifier>
+        <prism:volume>131</prism:volume>
+        <dc:title>Journal of Biomechanical Engineering</dc:title>
+        <dc:identifier>ISSN 0148-0731</dc:identifier>
+        <prism:number>011001</prism:number>
+        <dcterms:alternative>J Biomech Eng</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_17">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://doi.org/10.1115/1.2965374</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:44:29</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.nature.com/articles/s41598-022-21437-4">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>DOI 10.1038/s41598-022-21437-4</dc:identifier>
+                <prism:volume>12</prism:volume>
+                <dc:title>Scientific Reports</dc:title>
+                <dc:identifier>ISSN 2045-2322</dc:identifier>
+                <prism:number>1</prism:number>
+                <dcterms:alternative>Sci Rep</dcterms:alternative>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>Nature Publishing Group</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Neizert</foaf:surname>
+                        <foaf:givenName>C. A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Do</foaf:surname>
+                        <foaf:givenName>H. N. C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zibell</foaf:surname>
+                        <foaf:givenName>M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rieder</foaf:surname>
+                        <foaf:givenName>C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sinden</foaf:surname>
+                        <foaf:givenName>D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Niehues</foaf:surname>
+                        <foaf:givenName>S. M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Vahldiek</foaf:surname>
+                        <foaf:givenName>J. L.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lehmann</foaf:surname>
+                        <foaf:givenName>K. S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Poch</foaf:surname>
+                        <foaf:givenName>F. G. M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_20"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Hepatocellular carcinoma</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Surgical oncology</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Three-dimensional assessment of vascular cooling effects on hepatic microwave ablation in a standardized ex vivo model</dc:title>
+        <dcterms:abstract>The aim of this study was a three-dimensional analysis of vascular cooling effects on microwave ablation (MWA) in an ex vivo porcine model. A glass tube, placed in parallel to the microwave antenna at distances of 2.5, 5.0 and 10.0 mm (A–V distance), simulated a natural liver vessel. Seven flow rates (0, 1, 2, 5, 10, 100, 500 ml/min) were evaluated. Ablations were segmented into 2 mm slices for a 3D-reconstruction. A qualitative and quantitative analysis was performed. 126 experiments were carried out. Cooling effects occurred in all test series with flow rates ≥ 2 ml/min in the ablation periphery. These cooling effects had no impact on the total ablation volume (p &gt; 0.05) but led to changes in ablation shape at A–V distances of 5.0 mm and 10.0 mm. Contrary, at a A–V distance of 2.5 mm only flow rates of ≥ 10 ml/min led to relevant cooling effects in the ablation centre. These cooling effects influenced the ablation shape, whereas the total ablation volume was reduced only at a maximal flow rate of 500 ml/min (p = 0.002). Relevant cooling effects exist in MWA. They mainly depend on the distance of the vessel to the ablation centre.</dcterms:abstract>
+        <dc:date>2022-10-12</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nature.com/articles/s41598-022-21437-4</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:49:18</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>www.nature.com</z:libraryCatalog>
+        <dc:rights>2022 The Author(s)</dc:rights>
+        <bib:pages>17061</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_20">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nature.com/articles/s41598-022-21437-4.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:49:22</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_21">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:2040-7947"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Boregowda</foaf:surname>
+                        <foaf:givenName>Gangadhara</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mariappan</foaf:surname>
+                        <foaf:givenName>Panchatcharam</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_22"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Blood Flow Velocity</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computer Simulation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Humans</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Ablation Techniques</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>heat deposition</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Hepatic Artery</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Hot Temperature</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>liver cancer</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>microwave</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Microwaves</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>mixed finite element method (MFEM)</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>specific absorption rate (SAR)</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>thermal damage</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Effect of high blood flow on heat distribution and ablation zone during microwave ablation-numerical approach</dc:title>
+        <dcterms:abstract>Microwave ablation has become a viable alternative for cancer treatment for patients who cannot undergo surgery. During this procedure, a single-slot coaxial antenna is employed to effectively deliver microwave energy to the targeted tissue. The success of the treatment was measured by the amount of ablation zone created during the ablation procedure. The significantly large blood vessel placed near the antenna causes heat dissipation by convection around the blood vessel. The heat sink effect could result in insufficient ablation, raising the risk of local tumor recurrence. In this study, we investigated the heat loss due to large blood vessels and the relationship between blood velocity and temperature distribution. The hepatic artery, with a diameter of 4 mm and a height of 50 mm and two branches, is considered in the computational domain. The temperature profile, localized tissue contraction, and ablation zones were simulated for initial blood velocities 0.05, 0.1, and 0.16 m/s using the 3D Pennes bio-heat equation, temperature-time dependent model, and cell death model, respectively. Temperature-dependent blood velocity is modeled using the Navier-Stokes equation, and the fluid-solid interaction boundary is treated as a convective boundary. For discretization, we utilized H curl Ω   elements for the wave propagation model,  H 1 Ω   elements for the Pennes bio-heat model, and     H 1 Ω   3 × L 0 2 Ω   elements for the Navier-Stokes equation, where Ω  represents the computational domain. The simulated results show that blood vessels and blood velocity have a significant impact on temperature distribution, tissue contraction, and the volume of the ablation zone.</dcterms:abstract>
+        <dc:date>2024-08</dc:date>
+        <z:language>eng</z:language>
+        <z:libraryCatalog>PubMed</z:libraryCatalog>
+        <bib:pages>e3835</bib:pages>
+        <z:PMID>38800993</z:PMID>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:2040-7947">
+        <dc:identifier>DOI 10.1002/cnm.3835</dc:identifier>
+        <prism:volume>40</prism:volume>
+        <dc:title>International Journal for Numerical Methods in Biomedical Engineering</dc:title>
+        <dc:identifier>ISSN 2040-7947</dc:identifier>
+        <prism:number>8</prism:number>
+        <dcterms:alternative>Int J Numer Method Biomed Eng</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_22">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PubMed entry</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ncbi.nlm.nih.gov/pubmed/38800993</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:50:47</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://onlinelibrary.wiley.com/doi/abs/10.1002/cnm.3661">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_26"/>
+        <dc:title>A vector finite element approach to temperature dependent parameters of microwave ablation for liver cancer - Gangadhara - 2023 - International Journal for Numerical Methods in Biomedical Engineering - Wiley Online Library</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://onlinelibrary.wiley.com/doi/abs/10.1002/cnm.3661</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:51:42</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_26">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>A vector finite element approach to temperature dependent parameters of microwave ablation for liver cancer - Gangadhara - 2023 - International Journal for Numerical Methods in Biomedical Engineering - Wiley Online Library</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://onlinelibrary.wiley.com/doi/abs/10.1002/cnm.3661</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 06:51:50</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://ajronline.org/doi/10.2214/ajr.178.1.1780047">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0361-803X"/>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>American Roentgen Ray Society</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lu</foaf:surname>
+                        <foaf:givenName>David S. K.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Raman</foaf:surname>
+                        <foaf:givenName>Steven S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Vodopich</foaf:surname>
+                        <foaf:givenName>Darko J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wang</foaf:surname>
+                        <foaf:givenName>Michael</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sayre</foaf:surname>
+                        <foaf:givenName>James</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lassman</foaf:surname>
+                        <foaf:givenName>Charles</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_31"/>
+        <dc:title>Effect of Vessel Size on Creation of Hepatic Radiofrequency Lesions in  Pigs</dc:title>
+        <dcterms:abstract>OBJECTIVE. The effect of vessels and their size on radiofrequency lesion creation in the liver was evaluated with respect to potential for vascular injury and perfusion-mediated “heat sink” effect.SUBJECTS AND METHODS. Radiofrequency lesions targeted to tissue adjacent to a variety of vessels were created in vivo in the liver of 10 Yorkshire pigs. Postablation contrast-enhanced CT and then histopathologic analysis of the vessels and lesions were performed after sacrifice of the pigs. Degree of vascular injury and viability of perivascular hepatocytes were recorded and tabulated according to vessel size for both CT and histologic data sets.RESULTS. At CT, 42 (95%) of 44 veins greater than 3 mm remained patent, and four (20%) of 20 veins less than 3 mm were occluded. Heat sink effect, indicated by invagination of enhancing tissue between vessel and radiofrequency lesion, was observed in 32 (73%) of 44 veins greater than 3 mm and in zero of 20 veins less than 3 mm. On histopathology, 111 (100%) of 111 vessels less than 3 mm showed at least partial vessel wall injury, characterized by endothelial cell necrosis and luminal thrombus. In 24 vessels greater than 3 mm, the extent of vessel wall injury decreased with increasing vessel diameter. Viable perivascular tissue indicative of heat sink effect was identified in 12 of 24 veins greater than 3 mm, increasing to seven of seven veins greater than 5 mm. None of 96 vessels less than 2 mm and three of 111 vessels less than 3 mm showed any heat sink effect.CONCLUSION. There appears to be a narrow transition zone for hepatic vessels at 2-4 mm, beyond which the heat sink effect was seen consistently and substantial vascular injury was rare.</dcterms:abstract>
+        <dc:date>2002-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://ajronline.org/doi/10.2214/ajr.178.1.1780047</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:49:44</dcterms:dateSubmitted>
+        <z:libraryCatalog>ajronline.org (Atypon)</z:libraryCatalog>
+        <bib:pages>47-51</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0361-803X">
+        <dc:identifier>DOI 10.2214/ajr.178.1.1780047</dc:identifier>
+        <prism:volume>178</prism:volume>
+        <dc:title>American Journal of Roentgenology</dc:title>
+        <dc:identifier>ISSN 0361-803X</dc:identifier>
+        <prism:number>1</prism:number>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_31">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://ajronline.org/doi/pdf/10.2214/ajr.178.1.1780047</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:49:45</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://pmc.ncbi.nlm.nih.gov/articles/PMC7896424/">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1948-5204"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Feng</foaf:surname>
+                        <foaf:givenName>Jian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wang</foaf:surname>
+                        <foaf:givenName>Song</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jiang</foaf:surname>
+                        <foaf:givenName>Kai</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_33"/>
+        <link:link rdf:resource="#item_34"/>
+        <dc:title>Influence of the heat irrigating effect of radiofrequency ablation on regional liver tissue in Bama miniature pigs</dc:title>
+        <dcterms:abstract>BACKGROUND
+The results of the heat irrigating effect of radiofrequency ablation (RFA) are uncertain, and the accurate impact of the heat irrigating effect on regional liver tissue is unknown due to a lack of control experiments.
+
+AIM
+The aim of this study was to determine the influence of the heat irrigating effect of RFA on regional liver tissue in Bama miniature pigs. 
+
+METHODS
+Eight Bama miniature pigs were randomly divided into the observation group (group A) and the control group (group B), with 4 pigs/group. An RFA electrode needle was implanted near the hepatic segment vasculature (3-5 mm from the hepatic segment portal vein) under ultrasound guidance in group A. Similarly, an RFA electrode needle was implanted far from the hepatic segment vasculature (8-10 mm from the hepatic segment portal vein) in group B. The left internal lobe and right medial lobe were chosen as RFA sites in each pig. RFA was performed at the left internal lobe on day one in each pig, and at the right medial lobe 7 d later. Each RFA lasted 12 min. The general status of the pigs and serious complications were observed during the perioperative period. The pigs were sacrificed and the livers were removed immediately after RFA on the eighth day. The samples were roughly observed. Hematoxylin-eosin and Ki67 staining, as well as TUNEL detection, were performed on the tissue sections. 
+
+RESULTS
+All 8 animals successfully underwent ultrasound-guided RFA. No serious complications, such as massive hemorrhage, biliary fistula, severe pleural effusion, pneumothorax, peripheral organ failure, or renal failure occurred in any of the animals during the perioperative period. The RFA coagulative necrosis lesion was spherical and the surrounding liver tissue showed an inflammatory response. The difference in the Suzuki score of the liver tissue surrounding the ablated portal vein, and its distal area between groups A and B, was statistically significant (P &lt; 0.05). More apoptotic cells were seen in liver tissue surrounding the ablated portal vein and its distal area in group A, while fewer apoptotic cells in the same area were seen in group B. The difference in the apoptotic index of the above area between group A and group B was statistically significant (P &lt; 0.05). Cells staining positive for Ki67 were observed in liver tissue at the left internal lobe around the ablated portal vein and its distal area in group A. No Ki67 staining positive cells were observed in other tissue sections. The difference in the Ki67 staining positive index in the above area was statistically significant (P &lt; 0.05) between group A and group B.
+
+CONCLUSION
+Changes as a result of thermal damage occur in liver tissue around the ablated portal vein and its distal area due to the heat irrigating effect when the RFA electrode tip is close to (&lt; 5 mm) the portal vein.</dcterms:abstract>
+        <dc:date>2021-2-15</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pmc.ncbi.nlm.nih.gov/articles/PMC7896424/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:50:41</dcterms:dateSubmitted>
+        <z:libraryCatalog>PubMed Central</z:libraryCatalog>
+        <bib:pages>109-118</bib:pages>
+        <z:PMID>33643527</z:PMID>
+        <z:PMCID>PMC7896424</z:PMCID>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1948-5204">
+        <dc:identifier>DOI 10.4251/wjgo.v13.i2.109</dc:identifier>
+        <prism:volume>13</prism:volume>
+        <dc:title>World Journal of Gastrointestinal Oncology</dc:title>
+        <dc:identifier>ISSN 1948-5204</dc:identifier>
+        <prism:number>2</prism:number>
+        <dcterms:alternative>World J Gastrointest Oncol</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_33">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Catalog Page</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pmc.ncbi.nlm.nih.gov/articles/PMC7896424/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:50:41</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_34">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pmc.ncbi.nlm.nih.gov/articles/PMC7896424/pdf/WJGO-13-109.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:51:04</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://doi.org/10.2217/fon-2017-0736">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1479-6694"/>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>Taylor &amp; Francis</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kim</foaf:surname>
+                        <foaf:givenName>Christy</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_38"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>ablation assessment</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>heat sink effect</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>imaging accuracy</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>microwave ablation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>microwave ablation devices</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>radiofrequency ablation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>thermal ablation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>tissue contraction</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Understanding the Nuances of Microwave Ablation for More Accurate Post-Treatment Assessment</dc:title>
+        <dcterms:abstract>Microwave ablation (MWA) is a relatively new thermal modality for minimally invasive procedures compared with radiofrequency ablation. Although MWA and radiofrequency ablation are thermal modalities, their underlying physics and principles greatly differ. Consequently, it is imperative that clinicians be aware of how these differences impact realized ablation volumes to consistently ensure technical success and better patient outcomes. This paper will review the nuances specific to MWA technology (i.e., tissue properties, perfusion/heat sink effect, ablation assessment, imaging accuracy and tissue contraction) that are often overlooked based on familiarity with conventional thermal modalities to guide more accurate assessment of post-treatment MWA volumes.</dcterms:abstract>
+        <dc:date>2018-02-14</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://doi.org/10.2217/fon-2017-0736</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:53:07</dcterms:dateSubmitted>
+        <z:libraryCatalog>Taylor and Francis+NEJM</z:libraryCatalog>
+        <dc:description>_eprint: https://doi.org/10.2217/fon-2017-0736</dc:description>
+        <bib:pages>1755-1764</bib:pages>
+        <z:PMID>29441813</z:PMID>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1479-6694">
+        <dc:identifier>DOI 10.2217/fon-2017-0736</dc:identifier>
+        <prism:volume>14</prism:volume>
+        <dc:title>Future Oncology</dc:title>
+        <dc:identifier>ISSN 1479-6694</dc:identifier>
+        <prism:number>17</prism:number>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_38">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.tandfonline.com/doi/pdf/10.2217/fon-2017-0736</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:53:12</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.sciencedirect.com/science/article/pii/S1746809424007389">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1746-8094"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ślęzak</foaf:surname>
+                        <foaf:givenName>Michał</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kopernik</foaf:surname>
+                        <foaf:givenName>Magdalena</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Szawiraacz</foaf:surname>
+                        <foaf:givenName>Karolina</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Milewski</foaf:surname>
+                        <foaf:givenName>Grzegorz</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_41"/>
+        <link:link rdf:resource="#item_40"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Circulatory system</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>End-systolic elastance</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+                <rdf:value>Hybrid-digital model of the cardiovascular system</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Recurrent neural networks</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Stochastic gradient descent learning</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Volumetric blood flow</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Assessment of blood flow parameters in a hybrid-digital model of the cardiovascular system applying recurrent neural networks</dc:title>
+        <dcterms:abstract>End-systolic elastance of the left ventricle along with the waveforms of pressure and volumetric blood flow in particular sectors of the circulatory system are of importance in diagnosing various problems like dilated cardiomyopathy, left-ventricular hypertrophy, pulmonary hypertension, or ischemic heart disease. The objective of the paper is to broaden the spectrum of available methods to estimate those parameters since currently accessible techniques are often costly or troublesome. Six models have been developed − three of them estimate end-systolic elastance, two perform regression of volumetric blood flow, and one predicts blood pressure. Training datasets have been collected applying the unique hybrid-digital model. The input of the designed models consists of two or three different waveforms representing pressure and volumetric blood flow in particular areas, including heart ventricles, atria, and pulmonary vessels, in addition to the heart rate value. The basis of each model comprises bidirectional Long Short-Term Memory layers along with the dropout and feed-forward layers. Models that estimate end-systolic elastance achieved various accuracy. One of them performed exceptionally well since the absolute error did not exceed 0.169 mmHgcm3 which is a negligibly small value. The root-mean-square error (RMSE) of the model predicting pressure waveform reached 0.165 mmHg in the worst case. Regression of the volumetric blood flow resulted in 6.062 cm3s worst-case RMSE for the model focusing on the pulmonary valve and 15.979 cm3s for pulmonary veins model. Computed results, especially those of the models estimating end-systolic elastance, indicate that it is possible to utilize neural networks to estimate those parameters with sufficient accuracy.</dcterms:abstract>
+        <dc:date>2024-12-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S1746809424007389</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:54:53</dcterms:dateSubmitted>
+        <z:libraryCatalog>ScienceDirect</z:libraryCatalog>
+        <bib:pages>106680</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1746-8094">
+        <dc:identifier>DOI 10.1016/j.bspc.2024.106680</dc:identifier>
+        <prism:volume>98</prism:volume>
+        <dc:title>Biomedical Signal Processing and Control</dc:title>
+        <dc:identifier>ISSN 1746-8094</dc:identifier>
+        <dcterms:alternative>Biomedical Signal Processing and Control</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_41">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>ScienceDirect Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pdf.sciencedirectassets.com/273545/1-s2.0-S1746809424X00117/1-s2.0-S1746809424007389/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBgaCXVzLWVhc3QtMSJIMEYCIQCwbV3JHw7hsWcZEJ%2FpRd68hvWq%2F1vXeMq76Isgc8DmXQIhAORmRFd0Tp2Q3UKpv5bnqhvnshInLkkKtVXNZPaLVgHFKrsFCOD%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQBRoMMDU5MDAzNTQ2ODY1Igwyqlg6gtFVYlmqIMgqjwUd4JIi97m9SkiA27CIzTbG1qQOk9Z5c5GBg1ZbMB0OX4sOT3gRHDke8EsgyrATLZpLKUb1izM7FKoHqDRS1xyqRjeczNb%2B9HkznxTyQOYuLAqQgQE2rxiVbDuVMNbEBTd2gaCPyQZMhCVqEQNgq3EKLYSEDua7E4pwBLq9pxDVP2Kfgfop875OHb%2BRHdVVwxrlwdIuNFv1CpRBv9vDor1b4A6khGTtqPf9Y2WMpjeNaZfdv2tCuC9vZCWttcGuPR3DchTKUi30mLoMoGrjW99oJ6HjPKckAFPnxunEfICpMzMvGX%2FN7DOuNvSgryXRJDczkpVHE0kWDnA6CGy57xLHl5YMeEg9yhddV1dw5iawxoEecC4dJkcwS6tSt%2FyXnFE9VtDwzY%2FwQYhzA5LKoKvEfzcF%2BHghjDG5VS5UyYPy%2FhoISJYuVWHa9w747dg%2B%2BETEeNvocRgcOCyq%2BvoXnxfyFzwhN0uQnmZnWIrTE9qnuZcxHWKBgc1Q%2BJbmHy5rr%2BbPZjWvvNVgcQeFa1rUeQFKPs7X6jjo8%2FS1HT5WU%2FK25Eit2Kaxm4J4w6MUSjpQrKO5sBzIV0WaYPhVt6dLCBccyQOMLvx%2FFwKGfZNLT7tAiTfJCWTrOFHZ4jGp1Oz5Hj3i3uN5a2tI3YlUqia4UibR30lRIKyHm9eUr3DmIzG%2BBfpqkp%2Be8cJRLr%2FrNjraftg1VwvHTCSSR2rtb12eXJyyg%2FWksi60l98r8q0g2QoD4PppIudpjBaBL2dgg0I84kKjtmTb54vyclI4x9YXfA%2B9K9tCDoAi2GLVK3TePyX4eWeGkeQk36T9ocvlpnSoH3Udf7RvJlW%2FGExYOFG2w0Kojy86DeZe%2BBc8%2Bz4%2B96TXMNTb0s4GOrABJh3LApz78eJH3iV2psDSIjclUyDsfMIdfgbiyGm29J2hADE%2FlRKJYb74cw5xVlo56FGyofZr6XRfDfJSMx4FLSfaYuD3FTNf7vTkX6JigX4X0qRUT9DFMj6d%2FuGT87kagQ1I1ylYeFAinvTWsGhy2h0z7qVw3a1TRwqOTFKm6MdyiGnfZxH%2BRPbCgC%2FH99iptfdmqZUZsrpQoTIFEgQehWOPIiFQ2S7IreynzKuUtLQ%3D&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20260407T075459Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=300&amp;X-Amz-Credential=ASIAQ3PHCVTYUV2BXHPW%2F20260407%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Signature=07c6be475b78a45080b39c42bc4446f0886c5a79890c6155ff030447e4bfaa4d&amp;hash=aad7e7c29edcc49755fc6e1e71314abe01285d904390533c0a3d9b92d996d60b&amp;host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&amp;pii=S1746809424007389&amp;tid=spdf-63c16291-cf57-42da-8f79-4025724defad&amp;sid=a35e1d656717d34b0508257854cdd884ea19gxrqb&amp;type=client&amp;tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;ua=0f095a065e5558590e&amp;rr=9e8777a50817cbb5&amp;cc=in</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:55:18</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_40">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>ScienceDirect Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S1746809424007389</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:55:00</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.scirp.org/journal/paperinformation?paperid=135796">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>DOI 10.4236/oalib.1111640</dc:identifier>
+                <prism:volume>11</prism:volume>
+                <dc:title>Open Access Library Journal</dc:title>
+                <prism:number>9</prism:number>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>Scientific Research Publishing</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Amenya</foaf:surname>
+                        <foaf:givenName>Rogers Omboga</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Chuckravanen</foaf:surname>
+                        <foaf:givenName>Dineshen</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sigey</foaf:surname>
+                        <foaf:givenName>Johana Kibet</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Maloiy</foaf:surname>
+                        <foaf:givenName>Geoffrey Moriaso Ole</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_43"/>
+        <dc:title>Numerical Simulation of Blood Flow in Veins and Arteries: A Computational Approach</dc:title>
+        <dcterms:abstract>This study presents a numerical simulation methodology for investigating blood flow in veins and arteries using a computational approach. The simulation is based on the Navier-Stokes equations, discretization techniques, and finite difference methods. The aim of this research is to provide insights into the behavior of blood flow under simplified conditions, enabling a better understanding of the underlying fluid dynamics. The methodology incorporates steady-state flow assumptions and a 2D geometry, making it suitable for initial explorations of blood flow patterns in a controlled environment. However, it is important to note that the model’s assumptions limit its applicability to real-world scenarios, and additional considerations such as pulsatile flow, arterial compliance, and non-Newtonian viscosity should be incorporated for more accurate simulations.</dcterms:abstract>
+        <dc:date>2024-09-06</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.scirp.org/journal/paperinformation?paperid=135796</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:56:12</dcterms:dateSubmitted>
+        <z:shortTitle>Numerical Simulation of Blood Flow in Veins and Arteries</z:shortTitle>
+        <z:language>en</z:language>
+        <z:libraryCatalog>www.scirp.org</z:libraryCatalog>
+        <dc:rights>http://creativecommons.org/licenses/by/4.0/</dc:rights>
+        <bib:pages>1-12</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_43">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.scirp.org/pdf/Oalib2024 11null_1111640.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:56:16</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://ieeexplore.ieee.org/document/9136071/">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>DOI 10.23919/EuCAP48036.2020.9136071</dc:identifier>
+                <dc:title>2020 14th European Conference on Antennas and Propagation (EuCAP)</dc:title>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <foaf:name>IEEE</foaf:name>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Copenhagen, Denmark</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ruvio</foaf:surname>
+                        <foaf:givenName>G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cavagnaro</foaf:surname>
+                        <foaf:givenName>M.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_46"/>
+        <dc:title>Effects of choke in minimally-invasive small-profile microwave ablation applicators</dc:title>
+        <dcterms:abstract>Microwave ablation is a fast-growing hyperthermic treatment option for unresectable malignancies. From pioneering percutaneous microwave procedures to treat liver lesions, nowadays several new clinical indications are emerging. The spread of microwave ablation in clinical practice is growing alongside with the requirement for minimally-invasive procedures and, consequently, minimally invasive microwave applicators. Tri-axial structures and chokes have been proposed in the literature as techniques to improve the ablation performance of needle-shaped antennas. In this paper, those techniques are compared in terms of electric field distribution, return currents on the feed cable and specific absorption rate when integrated into an 18-gauge applicator.</dcterms:abstract>
+        <dc:date>3/2020</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://ieeexplore.ieee.org/document/9136071/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:58:14</dcterms:dateSubmitted>
+        <z:libraryCatalog>Semantic Scholar</z:libraryCatalog>
+        <dc:description>Conference Name: 2020 14th European Conference on Antennas and Propagation (EuCAP)
+ISBN: 9788831299008</dc:description>
+        <bib:pages>1-4</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_46">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Semantic Scholar Link</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.semanticscholar.org/paper/Effects-of-choke-in-minimally-invasive-microwave-Ruvio-Cavagnaro/0c3d5332d5f64ed4758393b7725467abad866d08</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:58:14</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://www.dl.begellhouse.com/journals/4b27cbfc562e21b8,1c7284fe5d5bf033,6adc8bf90c70aee0.html">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0278-940X"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Fallahi</foaf:surname>
+                        <foaf:givenName>Hojjatollah</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Prakash</foaf:surname>
+                        <foaf:givenName>Punit</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_47"/>
+        <dc:title>Antenna Designs for Microwave Tissue Ablation</dc:title>
+        <dcterms:abstract>Microwave (MW) ablation has emerged as a minimally invasive therapeutic modality and is in clinical use for treatment of unresectable tumors and cardiac arrhythmias, neuromodulation, endometrial ablation, and other applications. Components of image-guided MW ablation systems include high-power MW sources, ablation applicators that deliver power from the generator to the target tissue, cooling systems, energy-delivery control algorithms, and imaging guidance systems tailored to specific clinical indications. The applicator incorporates a MW antenna that radiates MW power into the surrounding tissue. A variety of antenna designs have been developed for MW ablation with the objective of efficiently transferring MW power to tissue, with a radiation pattern well matched to the size and shape of the targeted tissue. Here, we survey advances in percutaneous, endocavitary, and endoscopic antenna designs as an integral element of MW ablation applicators for a diverse set of clinical applications.</dcterms:abstract>
+        <dc:date>2018</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.dl.begellhouse.com/journals/4b27cbfc562e21b8,1c7284fe5d5bf033,6adc8bf90c70aee0.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:59:24</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <bib:pages>495-521</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0278-940X">
+        <dc:identifier>DOI 10.1615/CritRevBiomedEng.2018028554</dc:identifier>
+        <prism:volume>46</prism:volume>
+        <dc:title>Critical Reviews in Biomedical Engineering</dc:title>
+        <dc:identifier>ISSN 0278-940X</dc:identifier>
+        <prism:number>6</prism:number>
+        <dcterms:alternative>Crit Rev Biomed Eng</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_47">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://jees.kr/journal/view.php?doi=10.26866/jees.2023.4.r.177">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:2671-7255,%202671-7263"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lee</foaf:surname>
+                        <foaf:givenName>Jae-Gon</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_49"/>
+        <dc:title>Directional Monopole Antenna Using a Planar Lossy Magnetic (PLM) Surface</dc:title>
+        <dcterms:abstract>A directional monopole antenna using a planar lossy magnetic (PLM) surface is proposed in this paper. When a monopole antenna is designed vertically on the ground plane composed of a perfect electric conductor (PEC) and a perfect magnetic conductor (PMC), the surface current on the ground plane cannot flow on the PMC and only flows in one direction on the PEC. Therefore, the electromagnetic (EM) wave of such a monopole antenna can radiate in the direction perpendicular to the ground. Alternatively, a PLM surface such as a ferrite sheet with a high relative permeability was employed to achieve EM properties similar to the PMC. To verify the feasibility of the proposed antenna, a ferrite sheet with a relative permeability of 20 and a magnetic loss tangent of 10 at 2 GHz was utilized to implement the half PMC ground plane, and the monopole antenna was bent for miniaturization. The measured peak gain and the -10 dB bandwidth was about 1.3 dBi and 23% at the resonant frequency, respectively.</dcterms:abstract>
+        <dc:date>2023-07-31</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://jees.kr/journal/view.php?doi=10.26866/jees.2023.4.r.177</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 07:59:37</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <bib:pages>351-354</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:2671-7255,%202671-7263">
+        <dc:identifier>DOI 10.26866/jees.2023.4.r.177</dc:identifier>
+        <prism:volume>23</prism:volume>
+        <dc:title>Journal of Electromagnetic Engineering and Science</dc:title>
+        <dc:identifier>ISSN 2671-7255, 2671-7263</dc:identifier>
+        <prism:number>4</prism:number>
+        <dcterms:alternative>J. Electromagn. Eng. Sci</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_49">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://royalsocietypublishing.org/doi/10.1098/rsta.2011.0240">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1364-503X,%201471-2962"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Payne</foaf:surname>
+                        <foaf:givenName>Stephen</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Flanagan</foaf:surname>
+                        <foaf:givenName>Ronan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pollari</foaf:surname>
+                        <foaf:givenName>Mika</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Alhonnoro</foaf:surname>
+                        <foaf:givenName>Tuomas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bost</foaf:surname>
+                        <foaf:givenName>Claire</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>O'Neill</foaf:surname>
+                        <foaf:givenName>David</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Peng</foaf:surname>
+                        <foaf:givenName>Tingying</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Stiegler</foaf:surname>
+                        <foaf:givenName>Philipp</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_51"/>
+        <dc:title>Image-based multi-scale modelling and validation of radio-frequency ablation in liver tumours</dc:title>
+        <dcterms:abstract>The treatment of cancerous tumours in the liver remains clinically challenging, despite the wide range of treatment possibilities, including radio-frequency ablation (RFA), high-intensity focused ultrasound and resection, which are currently available. Each has its own advantages and disadvantages. For non- or minimally invasive modalities, such as RFA, considered here, it is difficult to monitor the treatment
+              in vivo
+              . This is particularly problematic in the liver, where large blood vessels act as heat sinks, dissipating delivered heat and shrinking the size of the lesion (the volume damaged by the heat treatment) locally; considerable experience is needed on the part of the clinician to optimize the heat treatment to prevent recurrence. In this paper, we outline our work towards developing a simulation tool kit that could be used both to optimize treatment protocols in advance and to train the less-experienced clinicians for RFA treatment of liver tumours. This tool is based on a comprehensive mathematical model of bio-heat transfer and cell death. We show how simulations of ablations in two pigs, based on individualized imaging data, compare directly with experimentally measured lesion sizes and discuss the likely sources of error and routes towards clinical implementation. This is the first time that such a ‘loop’ of mathematical modelling and experimental validation
+              in vivo
+              has been performed in this context, and such validation enables us to make quantitative estimates of error.</dcterms:abstract>
+        <dc:date>2011-11-13</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://royalsocietypublishing.org/doi/10.1098/rsta.2011.0240</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-04-07 08:00:21</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <bib:pages>4233-4254</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1364-503X,%201471-2962">
+        <dc:identifier>DOI 10.1098/rsta.2011.0240</dc:identifier>
+        <prism:volume>369</prism:volume>
+        <dc:title>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</dc:title>
+        <dc:identifier>ISSN 1364-503X, 1471-2962</dc:identifier>
+        <prism:number>1954</prism:number>
+        <dcterms:alternative>Phil. Trans. R. Soc. A.</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_51">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+</rdf:RDF>
