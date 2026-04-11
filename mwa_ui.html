@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Directional MWA Planning System v11</title>
+<style>
+:root {
+  --bg:        #0d1117;
+  --bg2:       #161b22;
+  --bg3:       #21262d;
+  --border:    #30363d;
+  --text:      #e6edf3;
+  --text2:     #8b949e;
+  --accent:    #1f6feb;
+  --green:     #2ea043;
+  --amber:     #d29922;
+  --red:       #da3633;
+  --cyan:      #0dcbea;
+  --radius:    8px;
+  --panel-w:   420px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Title bar ─────────────────────────────────────────── */
+#titlebar {
+  height: 44px;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 16px;
+  flex-shrink: 0;
+}
+#titlebar h1 { font-size: 14px; font-weight: 600; color: var(--text); }
+#titlebar .version { font-size: 11px; color: var(--text2); }
+.status-pill {
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  margin-left: auto;
+}
+.status-pill.ok   { background:#0d2c0f; border-color:var(--green); color:#5cba6a; }
+.status-pill.warn { background:#2c1c00; border-color:var(--amber); color:#e0ab3a; }
+.status-pill.err  { background:#2c0b0b; border-color:var(--red);   color:#e05555; }
+
+/* ── Main layout ──────────────────────────────────────── */
+#main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* ── Left wizard panel ────────────────────────────────── */
+#wizard {
+  width: var(--panel-w);
+  background: var(--bg2);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Step pills */
+#steps {
+  display: flex;
+  padding: 12px 16px;
+  gap: 6px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.step-pill {
+  flex: 1;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  transition: background .2s, color .2s;
+}
+.step-pill.active  { background: var(--accent); border-color: var(--accent); color: #fff; }
+.step-pill.done    { background:#0d2c0f; border-color:var(--green); color:#5cba6a; }
+
+/* Step panels */
+#step-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+.step-panel { display: none; }
+.step-panel.active { display: block; }
+
+/* ── Cards & form elements ────────────────────────────── */
+.card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 10px;
+}
+.card-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.label { color: var(--text2); font-size: 11px; margin-bottom: 4px; display: block; }
+select, input[type=file] {
+  width: 100%;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 7px 10px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+select:focus { outline: 2px solid var(--accent); border-color: transparent; }
+.radio-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+.radio-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color .15s;
+}
+.radio-row:hover { border-color: var(--accent); }
+.radio-row input[type=radio] { accent-color: var(--accent); }
+.radio-row .radio-label { font-size: 12px; color: var(--text); }
+.radio-row .radio-sub   { font-size: 11px; color: var(--text2); }
+
+/* Tumor selection cards */
+.tumor-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tumor-card:hover { border-color: var(--accent); background: #1c2330; }
+.tumor-card.selected { border-color: var(--accent); background: #0d1f35; }
+.tumor-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.tumor-info { flex: 1; }
+.tumor-name { font-size: 12px; font-weight: 600; color: var(--text); }
+.tumor-meta { font-size: 11px; color: var(--text2); margin-top: 2px; }
+.badge {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.badge-green { background:#0d2c0f; color:#5cba6a; }
+.badge-gray  { background:var(--bg3); color:var(--text2); }
+.badge-amber { background:#2c1c00; color:#e0ab3a; }
+.badge-red   { background:#2c0b0b; color:#e05555; }
+
+/* Drop zone */
+#dropzone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 28px 16px;
+  text-align: center;
+  color: var(--text2);
+  font-size: 12px;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+  margin-bottom: 12px;
+}
+#dropzone.drag-over { border-color: var(--accent); background: #0d1f35; }
+#dropzone svg { display: block; margin: 0 auto 8px; opacity: .4; }
+#file-summary { font-size: 11px; color: var(--green); margin-top: 6px; }
+
+/* Buttons */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 9px 16px;
+  border-radius: var(--radius);
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity .15s;
+  margin-bottom: 8px;
+}
+.btn:hover { opacity: .85; }
+.btn:disabled { opacity: .35; cursor: not-allowed; }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-success { background: var(--green); color: #fff; }
+.btn-cyan    { background: #0a4a5a; border: 1px solid var(--cyan); color: var(--cyan); }
+.btn-ghost   {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text2);
+}
+
+/* ASI gauge */
+#asi-section { margin-top: 12px; }
+.asi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+.asi-score { font-size: 26px; font-weight: 700; }
+.asi-label { font-size: 11px; font-weight: 600; padding: 2px 9px;
+             border-radius: 10px; }
+.asi-bar-bg {
+  height: 8px;
+  background: var(--bg3);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.asi-bar-fill { height: 100%; border-radius: 4px; transition: width .6s; }
+.asi-subscores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+.asi-sub {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 7px 10px;
+}
+.asi-sub-name { font-size: 10px; color: var(--text2); text-transform: uppercase; }
+.asi-sub-val  { font-size: 17px; font-weight: 700; color: var(--text); }
+
+/* Prescription table */
+.presc-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.presc-table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid var(--border);
+}
+.presc-table td:first-child { color: var(--text2); width: 50%; }
+.presc-table td:last-child  { color: var(--text); font-weight: 500; }
+.presc-table tr:last-child td { border-bottom: none; }
+
+/* OAR table */
+.oar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 5px;
+  font-size: 11px;
+}
+.oar-vessel { flex: 1; color: var(--text); }
+.oar-clear  { color: var(--text2); }
+
+/* Loading spinner */
+.spinner {
+  display: inline-block;
+  width: 14px; height: 14px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin .6s linear infinite;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Right 3D preview panel ───────────────────────────── */
+#preview-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+}
+#preview-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  gap: 10px;
+  flex-shrink: 0;
+  background: var(--bg2);
+}
+#preview-header h2 { font-size: 13px; font-weight: 600; }
+#preview-controls { margin-left: auto; display: flex; gap: 6px; }
+.icon-btn {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text2);
+  padding: 4px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: border-color .15s;
+}
+.icon-btn:hover { border-color: var(--accent); color: var(--text); }
+
+#preview-canvas {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+#preview-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+#preview-placeholder {
+  text-align: center;
+  color: var(--text2);
+  font-size: 13px;
+}
+#preview-placeholder svg { display: block; margin: 0 auto 12px; opacity: .2; }
+
+/* Vessel legend overlay */
+#vessel-legend {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(13,17,23,.85);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  font-size: 11px;
+  min-width: 160px;
+}
+.legend-row { display: flex; align-items: center; gap: 7px; margin-bottom: 5px; }
+.legend-row:last-child { margin-bottom: 0; }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* Tumor number overlays (shown in the canvas corner) */
+#tumor-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  max-width: 200px;
+}
+.t-chip {
+  background: rgba(13,17,23,.85);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: border-color .15s;
+}
+.t-chip:hover { border-color: var(--accent); }
+.t-chip.sel   { border-color: var(--accent); background: #0d1f35; color: #58a6ff; }
+
+/* Toast notification */
+#toast {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(60px);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 18px;
+  font-size: 12px;
+  color: var(--text);
+  transition: transform .3s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+#toast.show { transform: translateX(-50%) translateY(0); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<!-- ── Title bar ─────────────────────────────────────── -->
+<div id="titlebar">
+  <h1>Directional MWA Planning System</h1>
+  <span class="version">v11 · Fallahi 2018 · Lee 2023 · Audigier 2020</span>
+  <span id="status-pill" class="status-pill">Idle</span>
+</div>
+
+<!-- ── Main layout ──────────────────────────────────── -->
+<div id="main">
+
+  <!-- Left wizard panel -->
+  <div id="wizard">
+
+    <!-- Step pills -->
+    <div id="steps">
+      <div class="step-pill active" id="pill-1">1 Upload</div>
+      <div class="step-pill" id="pill-2">2 Tumors</div>
+      <div class="step-pill" id="pill-3">3 Parameters</div>
+      <div class="step-pill" id="pill-4">4 Results</div>
+    </div>
+
+    <!-- Step content -->
+    <div id="step-content">
+
+      <!-- ── STEP 1: Upload ──────────────────────────── -->
+      <div class="step-panel active" id="panel-1">
+        <div class="card">
+          <div class="card-title">Load dataset</div>
+          <div id="dropzone" onclick="document.getElementById('file-input').click()">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+            <div>Drag and drop VTK files here</div>
+            <div style="font-size:11px;margin-top:4px">or click to browse</div>
+            <div id="file-summary"></div>
+          </div>
+          <input type="file" id="file-input" multiple accept=".vtk" style="display:none" onchange="handleFileInput(this.files)">
+        </div>
+
+        <div class="card">
+          <div class="card-title">File assignment</div>
+          <span class="label">Tumor mesh (.vtk)</span>
+          <select id="sel-tumor"><option value="">— select file —</option></select>
+          <span class="label">Body surface (.vtk)</span>
+          <select id="sel-surface"><option value="">— select file —</option></select>
+          <span class="label">Vessel files (.vtk) — select all that apply</span>
+          <div id="vessel-checkboxes" style="margin-bottom:10px;"></div>
+        </div>
+
+        <button class="btn btn-primary" id="btn-upload" onclick="uploadFiles()" disabled>
+          Load and analyse
+        </button>
+      </div>
+
+      <!-- ── STEP 2: Tumor selection ───────────────── -->
+      <div class="step-panel" id="panel-2">
+        <div class="card">
+          <div class="card-title">Select tumor to analyse</div>
+          <div id="tumor-cards"></div>
+        </div>
+        <button class="btn btn-primary" id="btn-select-tumor" onclick="selectTumor()" disabled>
+          Confirm selection
+        </button>
+      </div>
+
+      <!-- ── STEP 3: Biological parameters ─────────── -->
+      <div class="step-panel" id="panel-3">
+
+        <div class="card">
+          <div class="card-title">Histological type</div>
+          <div class="radio-group" id="rg-histology">
+            <label class="radio-row">
+              <input type="radio" name="histology" value="HCC" checked>
+              <div><div class="radio-label">Hepatocellular Carcinoma (HCC)</div>
+                   <div class="radio-sub">Hypervascular · standard MWA response</div></div>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="histology" value="COLORECTAL">
+              <div><div class="radio-label">Colorectal metastasis</div>
+                   <div class="radio-sub">Hypovascular · +12% dose</div></div>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="histology" value="NEUROENDOCRINE">
+              <div><div class="radio-label">Neuroendocrine metastasis</div>
+                   <div class="radio-sub">Highly vascular · slight dose reduction</div></div>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="histology" value="CHOLANGIO">
+              <div><div class="radio-label">Cholangiocarcinoma</div>
+                   <div class="radio-sub">Fibrotic · +22% dose</div></div>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="histology" value="FATTY_BACKGROUND">
+              <div><div class="radio-label">Fatty / cirrhotic liver</div>
+                   <div class="radio-sub">Low conductivity · +30% dose</div></div>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="histology" value="UNKNOWN">
+              <div><div class="radio-label">Unknown / not biopsied</div>
+                   <div class="radio-sub">Conservative +10% uplift</div></div>
+            </label>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Tumor consistency</div>
+          <div class="radio-group">
+            <label class="radio-row">
+              <input type="radio" name="consistency" value="soft">
+              <div><div class="radio-label">Soft</div>
+                   <div class="radio-sub">Necrotic/cystic core · 10% dose reduction</div></div>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="consistency" value="firm" checked>
+              <div><div class="radio-label">Firm (standard)</div>
+                   <div class="radio-sub">Solid, typical</div></div>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="consistency" value="hard">
+              <div><div class="radio-label">Hard</div>
+                   <div class="radio-sub">Fibrotic/calcified · 20% dose increase</div></div>
+            </label>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Needle entry direction</div>
+          <div class="radio-group">
+            <label class="radio-row">
+              <input type="radio" name="entry" value="AUTO" checked>
+              <div><div class="radio-label">Automatic</div>
+                   <div class="radio-sub">Optimizer selects optimal axis</div></div>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="entry" value="SUPERIOR">
+              <div><div class="radio-label">Superior (cranial)</div>
+                   <div class="radio-sub">From above the liver</div></div>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="entry" value="ANTERIOR">
+              <div><div class="radio-label">Anterior</div>
+                   <div class="radio-sub">Standard percutaneous from front</div></div>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="entry" value="RIGHT_LAT">
+              <div><div class="radio-label">Right lateral</div></div>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="entry" value="LEFT_LAT">
+              <div><div class="radio-label">Left lateral</div></div>
+            </label>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="btn-optimise" onclick="runOptimise()">
+          Run directional optimizer
+        </button>
+      </div>
+
+      <!-- ── STEP 4: Results ────────────────────────── -->
+      <div class="step-panel" id="panel-4">
+
+        <!-- ASI gauge -->
+        <div class="card" id="asi-section" style="display:none">
+          <div class="card-title">Ablation Safety Index v11</div>
+          <div class="asi-header">
+            <span class="asi-score" id="asi-score-val">--</span>
+            <span class="asi-label" id="asi-label-badge">--</span>
+          </div>
+          <div class="asi-bar-bg">
+            <div class="asi-bar-fill" id="asi-bar" style="width:0%;background:var(--accent)"></div>
+          </div>
+          <div class="asi-subscores">
+            <div class="asi-sub"><div class="asi-sub-name">HSS</div><div class="asi-sub-val" id="asi-hss">--</div></div>
+            <div class="asi-sub"><div class="asi-sub-name">OCM</div><div class="asi-sub-val" id="asi-ocm">--</div></div>
+            <div class="asi-sub"><div class="asi-sub-name">CC</div><div class="asi-sub-val" id="asi-cc">--</div></div>
+            <div class="asi-sub"><div class="asi-sub-name">DRA</div><div class="asi-sub-val" id="asi-dra">--</div></div>
+            <div class="asi-sub" style="grid-column:span 2">
+              <div class="asi-sub-name">DAS (directional antenna score — new v11)</div>
+              <div class="asi-sub-val" id="asi-das">--</div>
+            </div>
+          </div>
+          <div id="asi-interpret"
+               style="margin-top:10px;font-size:11px;color:var(--text2);
+                      padding:8px;background:var(--bg2);border-radius:var(--radius)"></div>
+        </div>
+
+        <!-- Prescription -->
+        <div class="card" id="presc-card" style="display:none">
+          <div class="card-title">Treatment prescription</div>
+          <table class="presc-table">
+            <tr><td>Power</td><td id="pr-power">--</td></tr>
+            <tr><td>Duration</td><td id="pr-time">--</td></tr>
+            <tr><td>Forward zone diameter</td><td id="pr-fwd">--</td></tr>
+            <tr><td>Rear zone diameter</td><td id="pr-rear">--</td></tr>
+            <tr><td>Heat sink (Q_sink)</td><td id="pr-qsink">--</td></tr>
+            <tr><td>Net power</td><td id="pr-pnet">--</td></tr>
+            <tr><td>Histology</td><td id="pr-histo">--</td></tr>
+            <tr><td>Consistency</td><td id="pr-consist">--</td></tr>
+            <tr><td>Antenna axis</td><td id="pr-axis">--</td></tr>
+            <tr><td>DAS null angle</td><td id="pr-das-angle">--</td></tr>
+            <tr><td>Converged</td><td id="pr-conv">--</td></tr>
+            <tr><td>OAR status</td><td id="pr-oar">--</td></tr>
+          </table>
+        </div>
+
+        <!-- OAR list -->
+        <div class="card" id="oar-card" style="display:none">
+          <div class="card-title">OAR encroachment</div>
+          <div id="oar-list-div"></div>
+        </div>
+
+        <!-- Action buttons -->
+        <div id="action-btns" style="display:none">
+          <button class="btn btn-cyan" onclick="launchVis()">
+            Launch interactive 3D visualisation (PyVista)
+          </button>
+          <button class="btn btn-ghost" onclick="goToStep(1)">
+            Start new analysis
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Right: 3D preview ──────────────────────────── -->
+  <div id="preview-panel">
+    <div id="preview-header">
+      <h2>3D scene preview</h2>
+      <span id="scene-meta" style="font-size:11px;color:var(--text2)">No data loaded</span>
+      <div id="preview-controls">
+        <button class="icon-btn" onclick="refreshSnapshot()">Refresh</button>
+        <button class="icon-btn" onclick="launchVis()">Full view</button>
+      </div>
+    </div>
+    <div id="preview-canvas">
+      <!-- Placeholder -->
+      <div id="preview-placeholder">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+          <line x1="12" y1="22.08" x2="12" y2="12"/>
+        </svg>
+        Upload VTK files to see the 3D scene
+      </div>
+      <!-- Preview image (shown after analysis) -->
+      <img id="preview-img" style="display:none" alt="3D scene preview">
+
+      <!-- Vessel legend -->
+      <div id="vessel-legend" style="display:none">
+        <div class="legend-row"><div class="legend-dot" style="background:#FF0000"></div><span>Aorta</span></div>
+        <div class="legend-row"><div class="legend-dot" style="background:#1565C0"></div><span>Portal vein</span></div>
+        <div class="legend-row"><div class="legend-dot" style="background:#1E90FF"></div><span>Hepatic vein / IVC</span></div>
+        <div class="legend-row"><div class="legend-dot" style="background:orange"></div><span>Hepatic artery</span></div>
+        <div class="legend-row"><div class="legend-dot" style="background:#00ff90"></div><span>OAR rear-protected</span></div>
+        <div class="legend-row"><div class="legend-dot" style="background:#0dcbea"></div><span>Antenna forward axis</span></div>
+        <div class="legend-row"><div class="legend-dot" style="background:#e040fb"></div><span>Null (OAR side)</span></div>
+      </div>
+
+      <!-- Tumor chips -->
+      <div id="tumor-overlay"></div>
+    </div>
+  </div>
+
+</div><!-- #main -->
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<script>
+const API = "http://localhost:5050";
+let state = {
+  files: [],           // File objects from drag-drop
+  fileNames: [],
+  selectedTumorIdx: null,
+  metrics: [],
+  currentStep: 1,
+};
+
+const TUMOR_COLORS = [
+  "#ffd700","#ff8c00","#9370db","#ff69b4","#dc143c",
+  "#00ff7f","#ffa500","#00ced1","#fa8072","#7fff00",
+];
+
+// ── Step navigation ──────────────────────────────────────────────────────
+function goToStep(n) {
+  for (let i = 1; i <= 4; i++) {
+    document.getElementById(`panel-${i}`).classList.toggle("active", i === n);
+    const pill = document.getElementById(`pill-${i}`);
+    pill.classList.remove("active","done");
+    if (i === n) pill.classList.add("active");
+    else if (i < n) pill.classList.add("done");
+  }
+  state.currentStep = n;
+}
+
+// ── File handling ────────────────────────────────────────────────────────
+const dropzone = document.getElementById("dropzone");
+dropzone.addEventListener("dragover", e => { e.preventDefault(); dropzone.classList.add("drag-over"); });
+dropzone.addEventListener("dragleave",  () => dropzone.classList.remove("drag-over"));
+dropzone.addEventListener("drop", e => {
+  e.preventDefault(); dropzone.classList.remove("drag-over");
+  handleFileInput(e.dataTransfer.files);
+});
+
+function handleFileInput(files) {
+  state.files = Array.from(files);
+  state.fileNames = state.files.map(f => f.name);
+  populateSelects();
+  document.getElementById("file-summary").textContent =
+    `${files.length} file${files.length>1?"s":""} selected`;
+  document.getElementById("btn-upload").disabled = false;
+}
+
+function populateSelects() {
+  const names = state.fileNames;
+  ["sel-tumor","sel-surface"].forEach(id => {
+    const sel = document.getElementById(id);
+    sel.innerHTML = '<option value="">— select —</option>';
+    names.forEach(n => { const o=document.createElement("option"); o.value=n; o.text=n; sel.add(o); });
+    // Auto-detect
+    if (id === "sel-tumor")   names.forEach(n => { if (n.includes("lesion")||n.includes("leasion")||n.includes("tumor")) sel.value=n; });
+    if (id === "sel-surface") names.forEach(n => { if (n.includes("skin")||n.includes("surface")) sel.value=n; });
+  });
+  // Vessel checkboxes
+  const vbox = document.getElementById("vessel-checkboxes");
+  vbox.innerHTML = "";
+  names.forEach(n => {
+    const isVessel = !n.includes("lesion")&&!n.includes("leasion")&&!n.includes("skin")&&!n.includes("surface");
+    const row = document.createElement("label");
+    row.className = "radio-row";
+    row.style.marginBottom = "4px";
+    row.innerHTML = `<input type="checkbox" value="${n}" ${isVessel?"checked":""} style="accent-color:var(--accent)">
+      <div class="radio-label">${n}</div>`;
+    vbox.appendChild(row);
+  });
+}
+
+async function uploadFiles() {
+  setStatus("Uploading...", "");
+  const fd = new FormData();
+
+  const tumorName   = document.getElementById("sel-tumor").value;
+  const surfaceName = document.getElementById("sel-surface").value;
+  const vesselBoxes = document.querySelectorAll("#vessel-checkboxes input:checked");
+
+  if (!tumorName || !surfaceName) { toast("Select tumor and surface files"); return; }
+
+  const findFile = n => state.files.find(f => f.name === n);
+  fd.append("tumor_vtk",   findFile(tumorName));
+  fd.append("surface_vtk", findFile(surfaceName));
+  vesselBoxes.forEach(cb => {
+    const f = findFile(cb.value);
+    if (f) fd.append("vessel_vtks", f);
+  });
+
+  try {
+    showLoading("btn-upload", "Loading and analysing...");
+    const r = await fetch(`${API}/upload`, { method:"POST", body:fd });
+    const d = await r.json();
+    if (d.error) throw new Error(d.error);
+
+    // Now run analysis
+    const ar = await fetch(`${API}/analyse`, { method:"POST" });
+    const ad = await ar.json();
+    if (ad.error) throw new Error(ad.error);
+
+    // Populate tumor cards
+    state.metrics = ad.metrics;
+    buildTumorCards(ad.metrics);
+
+    // Show preview
+    showPreview(ad.preview_png);
+    document.getElementById("scene-meta").textContent =
+      `${ad.n_tumors} tumor${ad.n_tumors>1?"s":""} · ${ad.n_vessels} vessels`;
+    document.getElementById("vessel-legend").style.display = "block";
+
+    setStatus(`${ad.n_tumors} tumors detected`, "ok");
+    goToStep(2);
+    toast(`Analysis complete — ${ad.n_tumors} tumors found`);
+  } catch(e) {
+    setStatus("Error", "err");
+    toast("Error: " + e.message, true);
+  } finally {
+    resetLoading("btn-upload", "Load and analyse");
+  }
+}
+
+// ── Tumor cards ──────────────────────────────────────────────────────────
+function buildTumorCards(metrics) {
+  const container = document.getElementById("tumor-cards");
+  const overlay   = document.getElementById("tumor-overlay");
+  container.innerHTML = "";
+  overlay.innerHTML   = "";
+
+  metrics.forEach((m, i) => {
+    const col = TUMOR_COLORS[i % TUMOR_COLORS.length];
+
+    // Card in wizard
+    const card = document.createElement("div");
+    card.className = "tumor-card";
+    card.id = `tc-${i}`;
+    card.onclick = () => pickTumor(i);
+    const badge = m.eligible
+      ? `<span class="badge badge-green">Eligible</span>`
+      : `<span class="badge badge-gray">Ineligible</span>`;
+    card.innerHTML = `
+      <div class="tumor-dot" style="background:${col}"></div>
+      <div class="tumor-info">
+        <div class="tumor-name">Tumor ${i+1}  ${badge}</div>
+        <div class="tumor-meta">
+          Diam ${m.diameter_cm} cm  ·  Depth ${m.depth_cm} cm  ·
+          ${m.closest_vessel.replace("_"," ")} ${m.min_vessel_mm} mm
+        </div>
+      </div>`;
+    container.appendChild(card);
+
+    // Chip overlay on preview
+    const chip = document.createElement("div");
+    chip.className = "t-chip";
+    chip.id = `chip-${i}`;
+    chip.textContent = `T${i+1}`;
+    chip.style.borderLeftColor = col;
+    chip.onclick = () => pickTumor(i);
+    overlay.appendChild(chip);
+  });
+}
+
+function pickTumor(idx) {
+  state.selectedTumorIdx = idx;
+  document.querySelectorAll(".tumor-card").forEach((c,i) =>
+    c.classList.toggle("selected", i === idx));
+  document.querySelectorAll(".t-chip").forEach((c,i) =>
+    c.classList.toggle("sel", i === idx));
+  document.getElementById("btn-select-tumor").disabled = false;
+}
+
+async function selectTumor() {
+  if (state.selectedTumorIdx === null) return;
+  try {
+    showLoading("btn-select-tumor", "Analysing...");
+    const r = await fetch(`${API}/select_tumor`, {
+      method: "POST",
+      headers: { "Content-Type":"application/json" },
+      body: JSON.stringify({ tumor_idx: state.selectedTumorIdx }),
+    });
+    const d = await r.json();
+    if (d.error) throw new Error(d.error);
+
+    showPreview(d.preview_png);
+    setStatus(`T${state.selectedTumorIdx+1} selected · DAS ${d.das_angle_deg}°`, "ok");
+    toast(`Tumor ${state.selectedTumorIdx+1} confirmed · ${d.n_rays} SAR rays computed`);
+    goToStep(3);
+  } catch(e) {
+    setStatus("Error", "err");
+    toast("Error: " + e.message, true);
+  } finally {
+    resetLoading("btn-select-tumor", "Confirm selection");
+  }
+}
+
+// ── Optimiser ────────────────────────────────────────────────────────────
+async function runOptimise() {
+  const histology   = document.querySelector('input[name="histology"]:checked').value;
+  const consistency = document.querySelector('input[name="consistency"]:checked').value;
+  const entry       = document.querySelector('input[name="entry"]:checked').value;
+
+  try {
+    showLoading("btn-optimise", "Running optimizer...");
+    setStatus("Optimising...", "");
+
+    const r = await fetch(`${API}/optimise`, {
+      method: "POST",
+      headers: { "Content-Type":"application/json" },
+      body: JSON.stringify({
+        tumor_type_key:  histology,
+        consistency_key: consistency,
+        entry_axis_key:  entry,
+      }),
+    });
+    const d = await r.json();
+    if (d.error) throw new Error(d.error);
+
+    // Populate results
+    populateResults(d);
+    showPreview(d.preview_png);
+    setStatus(`ASI ${d.asi.asi}/100 [${d.asi.risk_label}]`,
+              d.asi.risk_label === "LOW" ? "ok" :
+              d.asi.risk_label === "MODERATE" ? "warn" : "err");
+    goToStep(4);
+    toast(`Optimisation complete — ASI ${d.asi.asi} [${d.asi.risk_label}]`);
+  } catch(e) {
+    setStatus("Error", "err");
+    toast("Error: " + e.message, true);
+    console.error(e);
+  } finally {
+    resetLoading("btn-optimise", "Run directional optimizer");
+  }
+}
+
+function populateResults(d) {
+  const asi  = d.asi;
+  const prsc = d.prescription;
+
+  // ASI section
+  document.getElementById("asi-section").style.display = "block";
+  document.getElementById("asi-score-val").textContent = asi.asi;
+  const colors = { LOW:"#2ea043", MODERATE:"#d29922", HIGH:"#e07020", CRITICAL:"#da3633" };
+  const col = colors[asi.risk_label] || "var(--accent)";
+  document.getElementById("asi-score-val").style.color = col;
+  const badge = document.getElementById("asi-label-badge");
+  badge.textContent = asi.risk_label;
+  badge.style.background = col + "22";
+  badge.style.color = col;
+  badge.style.border = `1px solid ${col}55`;
+  document.getElementById("asi-bar").style.width = asi.asi + "%";
+  document.getElementById("asi-bar").style.background = col;
+  document.getElementById("asi-hss").textContent = asi.hss_score;
+  document.getElementById("asi-ocm").textContent = asi.ocm_score;
+  document.getElementById("asi-cc").textContent  = asi.cc_score;
+  document.getElementById("asi-dra").textContent = asi.dra_score;
+  document.getElementById("asi-das").textContent = asi.das_score + " (null " + asi.das_angle_deg + "°)";
+  document.getElementById("asi-interpret").textContent = asi.interpretation;
+
+  // Prescription
+  document.getElementById("presc-card").style.display = "block";
+  document.getElementById("pr-power").textContent  = prsc.power_w + " W";
+  document.getElementById("pr-time").textContent   = prsc.time_s + " s (" + prsc.time_min + " min)";
+  document.getElementById("pr-fwd").textContent    = prsc.zone_fwd_diam_cm + " cm diam";
+  document.getElementById("pr-rear").textContent   = prsc.zone_rear_diam_cm + " cm diam (OAR-protected)";
+  document.getElementById("pr-qsink").textContent  = prsc.Q_sink_W + " W (directional)";
+  document.getElementById("pr-pnet").textContent   = prsc.P_net_W + " W";
+  document.getElementById("pr-histo").textContent  = prsc.histology;
+  document.getElementById("pr-consist").textContent= prsc.consistency;
+  document.getElementById("pr-axis").textContent   = prsc.antenna_axis.map(v=>v.toFixed(3)).join(", ");
+  document.getElementById("pr-das-angle").textContent = prsc.das_angle_deg + "° (0° = perfect OAR alignment)";
+  document.getElementById("pr-conv").textContent   = prsc.converged ? "Yes" : "No — constrained";
+  document.getElementById("pr-oar").textContent    = prsc.constrained ? "Constrained" : "OAR-safe";
+
+  // OAR list
+  const oarCard = document.getElementById("oar-card");
+  const oarDiv  = document.getElementById("oar-list-div");
+  oarDiv.innerHTML = "";
+  if (d.oar_list && d.oar_list.length > 0) {
+    oarCard.style.display = "block";
+    d.oar_list.forEach(o => {
+      const row = document.createElement("div");
+      row.className = "oar-row";
+      const riskCol = o.risk === "CRITICAL" ? "var(--red)" :
+                      o.in_rear_lobe ? "var(--green)" : "var(--amber)";
+      const icon = o.in_rear_lobe ? "✓" : "⚠";
+      row.innerHTML = `
+        <span style="color:${riskCol};font-size:14px">${icon}</span>
+        <span class="oar-vessel">${o.vessel.replace(/_/g," ")}</span>
+        <span class="oar-clear">${o.wall_clear_mm} mm</span>
+        <span class="badge" style="background:${riskCol}22;color:${riskCol};border:1px solid ${riskCol}55">
+          ${o.in_rear_lobe ? "rear-protected" : o.risk}
+        </span>`;
+      oarDiv.appendChild(row);
+    });
+  }
+
+  document.getElementById("action-btns").style.display = "block";
+}
+
+// ── Launch PyVista ────────────────────────────────────────────────────────
+async function launchVis() {
+  try {
+    const r = await fetch(`${API}/visualise`, { method:"POST" });
+    const d = await r.json();
+    if (d.error) throw new Error(d.error);
+    toast("PyVista window launching — check your taskbar");
+  } catch(e) {
+    toast("Error: " + e.message, true);
+  }
+}
+
+// ── Preview image ─────────────────────────────────────────────────────────
+function showPreview(b64) {
+  if (!b64) return;
+  const img = document.getElementById("preview-img");
+  const ph  = document.getElementById("preview-placeholder");
+  img.src = "data:image/png;base64," + b64;
+  img.style.display = "block";
+  ph.style.display  = "none";
+}
+
+async function refreshSnapshot() {
+  try {
+    const r = await fetch(`${API}/snapshot`);
+    const d = await r.json();
+    if (d.png) showPreview(d.png);
+  } catch(e) { toast("Snapshot failed"); }
+}
+
+// ── UI helpers ────────────────────────────────────────────────────────────
+function setStatus(text, type) {
+  const pill = document.getElementById("status-pill");
+  pill.textContent = text;
+  pill.className = "status-pill" + (type ? " " + type : "");
+}
+
+function showLoading(id, text) {
+  const btn = document.getElementById(id);
+  if (!btn) return;
+  btn.disabled = true;
+  btn.innerHTML = `<span class="spinner"></span>${text}`;
+}
+function resetLoading(id, text) {
+  const btn = document.getElementById(id);
+  if (!btn) return;
+  btn.disabled = false;
+  btn.textContent = text;
+}
+
+let toastTimer;
+function toast(msg, isErr=false) {
+  const el = document.getElementById("toast");
+  el.textContent = msg;
+  el.style.borderColor = isErr ? "var(--red)" : "var(--border)";
+  el.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove("show"), 3200);
+}
+</script>
+</body>
+</html>
